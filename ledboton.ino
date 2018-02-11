@@ -21,16 +21,14 @@ estado = digitalRead(boton);	// Leer el valor de la entrada botón (pin 2 ) y gu
 		encender = 1 - encender;	//le asiga a la variable encender el valor 1 - lo que valga encender (iniciando el programa vale cero)
 		delay(150);		// pausa de 150 ms
 	}
-	anterior = estado;
-	if(encender == 1){
-	    alarma = 1;
-	    digitalWrite(led, HIGH);
-	    delay(200);
+	anterior = estado;  // Asignamos a la variable anterior el valor de estado
+	if(encender == 1){ // si encender es igual a 1 se ejecuta lo que esta en las llaves
+	    digitalWrite(led, HIGH); //La salida led se coloca en alto
+	    delay(200); // pausa de 200ms
 	}
-	else{
-		alarma = 0;
-		digitalWrite(led, LOW);
-		delay(200);
+	else{ // en caso de que encender no sea igua a 1 se ejecuta lo que este en las llaves
+		digitalWrite(led, LOW); // La salida led se coloca en estado bajo
+		delay(200); // pausa de 200ms
 	}
 }
 
