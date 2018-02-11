@@ -16,10 +16,10 @@ void setup(){
 
 void loop() {
 
-estado = digitalRead(boton);
-	if ((estado == HIGH) && (anterior == LOW)){
-		encender = 1 - encender;
-		delay(150);
+estado = digitalRead(boton);	// Leer el valor de la entrada botón (pin 2 ) y guardar el dato en la variable estado
+	if ((estado == HIGH) && (anterior == LOW)){ //Si estado es igual a Alto (boton presionado) y la variable anterior igual a Bajo pasa a la sig linea
+		encender = 1 - encender;	//le asiga a la variable encender el valor 1 - lo que valga encender (iniciando el programa vale cero)
+		delay(150);		// pausa de 150 ms
 	}
 	anterior = estado;
 	if(encender == 1){
